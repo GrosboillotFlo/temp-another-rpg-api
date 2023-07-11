@@ -3,7 +3,7 @@ openapi: "3.0.0"
 info:
   version: 1.0.0
   title: Another RPG API
-  description: Another RPG API specifications.
+  description: Another RPG API
   license:
     name: MIT
   contact:

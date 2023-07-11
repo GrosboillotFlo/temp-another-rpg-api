@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
+    "html": "npm run build && redocly build-docs _build/openapi.yaml  --output _build/index.html",
     "lint": "yarn build && spectral lint _build/openapi.yaml",
     "preview": "yarn build && redocly preview-docs _build/openapi.yaml",
     "clean": "rm -r _build",
