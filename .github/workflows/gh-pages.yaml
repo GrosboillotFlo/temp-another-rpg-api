@@ -14,7 +14,7 @@ jobs:
           node-version: "16.x"
       - name: Build
         run: |
-          yarn ci
+          yarn install --frozen-lockfile
           yarn build
       - name: Deploy to GitHub Pages
         run: yarn deploy
