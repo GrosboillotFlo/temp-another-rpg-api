@@ -6,9 +6,10 @@
   "main": "index.js",
   "scripts": {
     "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
-    "clean": "rm -r _build",
     "lint": "yarn build && spectral lint _build/openapi.yaml",
-    "preview": "yarn build && redocly preview-docs _build/openapi.yaml"
+    "preview": "yarn build && redocly preview-docs _build/openapi.yaml",
+    "clean": "rm -r _build",
+    "deploy": "./ci/deploy.sh"
   },
   "dependencies": {
     "@apidevtools/swagger-cli": "^4.0.4",
