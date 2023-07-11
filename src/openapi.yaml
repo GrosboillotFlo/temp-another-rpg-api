@@ -1,0 +1,47 @@
+openapi: "3.0.0"
+
+info:
+  version: 1.0.0
+  title: Another RPG API
+  description: Another RPG API specifications.
+  license:
+    name: MIT
+  contact:
+    name: API Support
+    url: http://www.example.com/support
+    email: support@example.com
+
+servers:
+  - url: http://www.example.com/api
+
+tags:
+  - name: meta
+
+paths:
+  "/healthz":
+    get:
+      tags:
+        - meta
+      operationId: healthz
+      description: Get the status of the API
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                description: The status of the API.
+                required:
+                  - status
+                properties:
+                  status:
+                    type: string
+                    description: Can be "OK" or "NOK".
+              examples:
+                OK:
+                  value:
+                    status: OK
+                NOK:
+                  value:
+                    status: NOK
